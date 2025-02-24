@@ -1,0 +1,31 @@
+/*Revisi0on del ejercicio del 19 dr febrero 
+escrito el 24 de febrero*/
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+int main(){
+float x, y, z, //variables principales 
+float re, rc, theta, phi, //variables por calcular 
+//cuerpos del programa 
+printf("introduce los valores de las variables x, y, z que quieres convertir\n");
+scanf(" %f %f %f ", &x, &y, &z);
+//realizo las operaciones de transformacion de coordenadas 
+//conversion a coordenadas esfericas
+re=sqrt(x*x + y*y + z*z); //radio
+theta=atan(x/y); //theta (angulo)
+phi=acos(z/re); //angulo respecto a z
+
+//conversion a coordenadas cilindricas
+rc=sqrt(x*x +y*y); //radio
+theta=atan(x/y); //theta (angulo)
+z=z
+printf("resultados \n");
+//resultados esfericos n
+printf("coordenadas esfericas:\n")
+printf("%f%f%f\n", re, theta, phi);
+//resultados cilindricos
+printf("coordenadas cilindricas");
+printf("%f%f%f\n",rc, theta, z);
+exit(0);
+}
